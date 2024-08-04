@@ -9,7 +9,9 @@ function NavBar() {
 
   return (
     <div className='navbar'>
-        <img src={assets.logo} alt="" className='logo'/>
+
+      <div className='label'><p>Food Hub</p><img src={assets.logo} alt="" className='logo'/></div>
+        {/* <img src={assets.logo} alt="" className='logo'/> */}
 
         <ul className="navbar-menu">
             <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</li>
