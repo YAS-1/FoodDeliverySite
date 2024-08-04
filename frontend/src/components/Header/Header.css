@@ -15,6 +15,7 @@
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
+    animation: fadeIn 3s;
 }
 
 .header-content h2{
@@ -27,4 +28,25 @@
 .header-content p{
     color: white;
     font-size: 1.3vw;
+}
+
+.header-content button{
+    border: none;
+    color: rgb(53, 52, 52);
+    padding: 0.5vw 1vw;
+    font-weight: 600;
+    background-color: white;
+    font-size: max(1.1vw,13px);
+    border-radius: 50px;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
