@@ -10,6 +10,7 @@ function App() {
   return (
     <div className='app'>
       <NavBar/>
+      <hr className='liner'/>
       <Routes>
         <Route path="/"  exact element={<Home/>}/>
         <Route path="/cart" exact element={<Cart/>}/>
