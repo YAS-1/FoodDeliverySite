@@ -13,15 +13,18 @@ const StoreContextProvider = (props) => {
 
     const addToCart = (itemId) =>{
         if (!cartItems[itemId]) {
-            setCartItems((prev) => ({ ...prev, [itemId]: 1 })); // If the itemId is not in the cart then it will be added and its value will be 1
+            // If the itemId is not in the cart then it will be added and its value will be 1
+            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
         }
         else{
-            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1})); // If the itemId already exist in the cart ten its value will be increased by 1
+            // If the itemId already exist in the cart ten its value will be increased by 1
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1})); 
         }
     }
 
     const removeFromCart = (itemId) =>{
-        setCartItems((prev) => ({...prev, [itemId]:prev[itemId]-1})) // The itemId value will be decreased by 1
+        // The itemId value will be decreased by 1
+        setCartItems((prev) => ({...prev, [itemId]:prev[itemId]-1})) 
     }
 
     useEffect(()=>{

@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <div className='navbar'>
 
-      <div className='label'><p>Food Hub</p><img src={assets.logo} alt="" className='logo'/></div>
+      <div className='label'><img src={assets.logo_a} alt="" className='logo'/></div>
         {/* <img src={assets.logo} alt="" className='logo'/> */}
 
         <ul className="navbar-menu">
