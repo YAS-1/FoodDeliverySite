@@ -7,10 +7,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Kanit;
+  scroll-behavior: smooth;
 }
 body{
   min-height: 100vh;
   user-select: none;
+  scroll-behavior: smooth;
 }
 a{
   text-decoration: none;

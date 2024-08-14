@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 import "./NavBar.css"
 import { assets } from '../../assets/assets'
 
@@ -14,10 +15,10 @@ function NavBar() {
         {/* <img src={assets.logo} alt="" className='logo'/> */}
 
         <ul className="navbar-menu">
-            <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</li>
-            <li onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</li>
-            <li onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>mobile-app</li>
-            <li onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</li>
+            <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
+            <a href="#app-download" onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>mobile-app</a>
+            <a href="#explore-menu" onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</a>
+            <a href="#footer" onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
         </ul>
 
         <div className="navbar-right">

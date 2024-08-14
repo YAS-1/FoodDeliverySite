@@ -21,7 +21,7 @@
 .header-content h2{
     font-weight: 500;
     color: white;
-    font-size: max(3vw,22px);
+    font-size: max(2.5vw,21px);
 
 }
 
@@ -40,6 +40,23 @@
     border-radius: 50px;
 }
 
+@media (max-width:1050px) {
+    .header-content{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+    .header-content{
+        max-width: 65%;
+    }
+    .header-content p{
+        display: none;
+    }
+    .header-content button{
+        padding: 2vw 4vw;
+    }
+}
 
 /* Animation */
 @keyframes fadeIn {
