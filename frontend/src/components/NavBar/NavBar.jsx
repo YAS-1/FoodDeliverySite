@@ -4,7 +4,7 @@ import "./NavBar.css"
 import { assets } from '../../assets/assets'
 
 {/*The Navbar component*/}
-function NavBar() {
+function NavBar( {setShowLogin} ) {
 
   const [menu, setMenu] = useState("mobile-app");
 
@@ -27,7 +27,7 @@ function NavBar() {
                 <img src={assets.basket_icon} alt="" />
                 <div className="dot"></div>
             </div>
-            <button>sign in</button>
+            <button onClick={()=>setShowLogin(true)}>sign in</button>
         </div>
     </div>
   )
