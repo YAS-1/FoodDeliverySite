@@ -11,8 +11,8 @@ function NavBar( {setShowLogin} ) {
   return (
     <div className='navbar'>
 
-      <div className='label'><img src={assets.logo_a} alt="" className='logo'/></div>
-        {/* <img src={assets.logo} alt="" className='logo'/> */}
+      <div className='label'><Link to="/"><img src={assets.logo_a} alt="" className='logo'/></Link></div>
+        
 
         <ul className="navbar-menu">
             <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
@@ -24,7 +24,7 @@ function NavBar( {setShowLogin} ) {
         <div className="navbar-right">
             <img src={assets.search_icon} alt="" />
             <div className="navbar-search-icon">
-                <img src={assets.basket_icon} alt="" />
+                <Link to="/cart"><img src={assets.basket_icon} alt="" /></Link>
                 <div className="dot"></div>
             </div>
             <button onClick={()=>setShowLogin(true)}>sign in</button>
