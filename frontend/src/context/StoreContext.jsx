@@ -4,13 +4,14 @@
 import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
 
-export const StoreContext = createContext(null);
+export const StoreContext = createContext(null); //Creating the StoreContext to store all values to be used
 
 const StoreContextProvider = (props) => {
 
 
-    const [cartItems, setCartItems] = useState({});
+    const [cartItems, setCartItems] = useState({}); //Creating the cart object to store the item id with a value
 
+    //Adding to Cart functionality
     const addToCart = (itemId) =>{
         if (!cartItems[itemId]) {
             // If the itemId is not in the cart then it will be added and its value will be 1
@@ -22,22 +23,38 @@ const StoreContextProvider = (props) => {
         }
     }
 
+
+
+    //Removing from Cart functionality
     const removeFromCart = (itemId) =>{
         // The itemId value will be decreased by 1
         setCartItems((prev) => ({...prev, [itemId]:prev[itemId]-1})) 
     }
 
-    useEffect(()=>{
-        console.log(cartItems)
-    },[cartItems])
 
+
+    //Calculating the total amount for our cart items
+    const getTotalCartAmount = () =>{
+        let totalAmount = 0; // Initial value for totalAmount is 0
+        for(const item in cartItems){ 
+            if (cartItems[item]>0){
+               let itemInfo = food_list.find((product)=>product._id === item);
+               totalAmount += itemInfo.price* 10 * cartItems[item];
+            }
+        }
+        return totalAmount;
+    }
+
+
+    //The context values used in different components
     const contextValue = {
         // Add your context values here
         food_list,
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalCartAmount
     }
 
     return (
