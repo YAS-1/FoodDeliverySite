@@ -45,7 +45,7 @@ function PlaceOrder() {
 						<hr />
 						<div className='cart-total-details'>
 							<p>Delivery Fee</p>
-							<p>${getTotalCartAmount()===0? 0:5}</p>
+							<p>${getTotalCartAmount()===0? 0:10}</p>
 						</div>
 						<hr />
 						<div className='cart-total-details'>
