@@ -9,7 +9,7 @@ const addFood = async (req,res) => {
     let image_filename = `${req.file.filename}`;
 
     // creating a new food using the food model
-    const newFood = new foodModel({
+    const food = new foodModel({
         
         name: req.body.name, // food name is got from the name field
         description: req.body.description, // description is got from the description field
