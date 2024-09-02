@@ -27,7 +27,7 @@ connectDB();
 
 
 
-// api endponits
+// api endpoints
 app.use("/api/food",foodRouter)
 
 

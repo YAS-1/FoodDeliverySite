@@ -16,7 +16,18 @@ const addFood = async (req,res) => {
         price: req.body.price, // price is got from the price field
         category:req.body.category, // category is got from the category field
         image: image_filename // image filename is got from the image field
-    })
-}
+
+    }) // When ever food details are entered in the body, we shall access the data using this function through the using api
+
+
+    // Try and catch block to catch any errors
+    try {
+        await food.save(); // Food item will be saved in the database
+        res.json({success:true,message:"Food Added"})
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:"Error"})
+    }
+} 
 
 export {addFood}

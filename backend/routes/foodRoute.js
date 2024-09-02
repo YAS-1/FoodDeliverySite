@@ -8,7 +8,7 @@ const foodRouter = express.Router(); // To use to create the different methods i
 
 // Image storage engine
 const storage = multer.diskStorage({
-    destination:"uploads", // The destination where the image will be sotred "the uploads folder"
+    destination:"uploads", // The destination where the image will be stored "the uploads folder"
     filename:(req,file,cb) => {
         return cb(null,`${Date.now()} ${file.originalname}`) // The time stamp when the image is added is set as the file original name to make it unique
     }
