@@ -33,10 +33,22 @@ const addFood = async (req,res) => {
 
 //all food list ("api")
 const listFood = async (req,res) =>{
-
+    try {
+        const foods = await foodModel.find() // find all food items in the foodModel database
+        res.json({success:true,data:foods})
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:"Error"})
+    }
 }
 
 
 
+// remove food item ("api")
+// To use to remove food item data from database
+const removeFood = async (req,res) =>{
 
-export {addFood,listFood}
+}
+
+
+export {addFood,listFood,removeFood}
