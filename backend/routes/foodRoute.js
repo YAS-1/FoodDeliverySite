@@ -1,5 +1,5 @@
 import express from "express"
-import { addFood  } from "../controllers/foodController.js"
+import { addFood, listFood  } from "../controllers/foodController.js"
 import multer from "multer" // To create the image storage system
 
 const foodRouter = express.Router(); // To use to create the different methods ie; GET,POST,DELETE...
@@ -24,6 +24,7 @@ const upload = multer({storage:storage}) // To use the storage engine in the rou
 // foodRouter.post sends a request to the server through the end point "/add" to complete two tasks ie: 1 to upload the file entered within the image form field to the specified destination. 2 To execute the addFood function
 foodRouter.post("/add",upload.single("image"),addFood) // Used to send data on the server, when processed we get a response
 
+foodRouter.get("/list",listFood); // Used to retrieve data from the server
 
 
 
