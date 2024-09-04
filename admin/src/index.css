@@ -24,3 +24,7 @@ hr{
     height: 1px;
     background-color: #ccc;
 }
+
+.app-content{
+    display: flex;
+}
