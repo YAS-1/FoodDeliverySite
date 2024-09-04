@@ -5,7 +5,10 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div>Navbar</div>
+    <div className="navbar">
+        <img src="" alt="" />
+        <img src="" alt="" />
+    </div>
   )
 }
 
