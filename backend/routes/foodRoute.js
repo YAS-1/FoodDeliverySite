@@ -27,7 +27,7 @@ foodRouter.post("/add",upload.single("image"),addFood) // Used to send data on t
 // foodRouter.get is used to retrieve data from the server through end point "/list" the function with the listFood api is executed displaying all the data within the foodModel database
 foodRouter.get("/list",listFood); // Used to retrieve data from the server
 
-
+// foodRouter.post is used to retrieve data from the server through end point "/remove" the function with the removeFood api is executed removing the selected food item from the foodModel database
 foodRouter.post("/remove",removeFood) 
 
 
