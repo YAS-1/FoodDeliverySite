@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem';
 
 
-{/*The Food Display compnent. The section where the food items will be displayed*/}
+{/*The Food Display component. The section where the food items will be displayed*/}
 function FoodDisplay({category}) {
 
   const {food_list} = useContext(StoreContext);
